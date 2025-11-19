@@ -1,5 +1,6 @@
 import { Button, Grid, GridItem } from "@chakra-ui/react";
 import NavBar from "./components/NavBar";
+import HeroBox from "./components/HeroBox";
 
 function App() {
   return (
@@ -8,8 +9,8 @@ function App() {
         <NavBar />
       </GridItem>
 
-      <GridItem area="main" bg="green">
-        main
+      <GridItem area="main" >
+        <HeroBox />
       </GridItem>
     </Grid>
   );

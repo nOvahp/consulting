@@ -1,7 +1,7 @@
 import { Box, Button, HStack } from "@chakra-ui/react";
 import { ColorModeButton } from "./ui/color-mode";
-import { colors } from "../colors";
-import { fonts } from "../font";
+import { colors } from "../utilities/colors";
+import { fonts } from "../utilities/font";
 
 const NavBar = () => {
   return (
