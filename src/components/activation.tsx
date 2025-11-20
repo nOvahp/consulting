@@ -5,7 +5,7 @@ import { colors } from "@/utilities/colors";
 
 function Activation() {
   return (
-    <Box mx="6%" mb={"40px"} justifyItems={"center"}>
+    <Box mx="6%" mb={"65px"} justifyItems={"center"}>
       <HStack>
         <VStack>
           <Text

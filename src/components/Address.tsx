@@ -5,14 +5,15 @@ import { Phone, Mail, MapPin } from "lucide-react";
 
 function Address() {
   return (
-    <Box mx="6%">
+    <Box mx="6%" mb={"65px"}>
       <HStack>
         <HStack
           borderRightWidth={2}
           borderRightColor={colors.border}
           py="1%"
           px="5%"
-          alignItems="flex-start"
+          alignItems="center"
+          
           width="100%"
           minWidth={0}
         >
@@ -21,7 +22,7 @@ function Address() {
             flex="1"
             minWidth={0}
             width="100%"
-            gap={2}
+            gap={0}
           >
             <Text
               fontFamily={fonts.bold}
@@ -61,7 +62,7 @@ function Address() {
           borderRightColor={colors.border}
           py="1%"
           px="5%"
-          alignItems="flex-start"
+          alignItems="center"
           width="100%"
           minWidth={0}
         >
@@ -70,7 +71,7 @@ function Address() {
             flex="1"
             minWidth={0}
             width="100%"
-            gap={2}
+            gap={0}
           >
             <Text
               fontFamily={fonts.bold}
@@ -108,7 +109,7 @@ function Address() {
         <HStack
           py="1%"
           px="5%"
-          alignItems="flex-start"
+          alignItems="center"
           width="100%"
           minWidth={0}
         >
@@ -117,7 +118,7 @@ function Address() {
             flex="1"
             minWidth={0}
             width="100%"
-            gap={2}
+            gap={0}
           >
             <Text
               fontFamily={fonts.bold}
