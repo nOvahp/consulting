@@ -27,7 +27,7 @@ const feature: cardData[] = [
 
 function Features() {
   return (
-    <HStack mx={"6%"} mb={"30px"} >
+    <HStack mx={"6%"} mb={"40px"} >
       <FeatureCard
         title={feature[0].title}
         description={feature[0].description}

@@ -3,6 +3,7 @@ import Features from "./components/Features";
 import HeroBox from "./components/HeroBox";
 import NavBar from "./components/NavBar";
 import  LatestPost from "./components/LatestPost";
+import FAQ from "./components/FAQ";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <HeroBox />
         <Features />
         <LatestPost />
+        <FAQ />
       </GridItem>
     </Grid>
   );

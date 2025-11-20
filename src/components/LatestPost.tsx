@@ -1,10 +1,9 @@
-import LatestPostCard, { type LatestPostCardData } from "./LatestPostCard";
-import DOCX from "../assets/docx.png";
-import MOV from "../assets/mov.png";
-import IMG from "../assets/img.png";
-import { VStack, Text, Button, HStack } from "@chakra-ui/react";
 import { colors } from "@/utilities/colors";
 import { fonts } from "@/utilities/font";
+import { Button, HStack, Text, VStack } from "@chakra-ui/react";
+import DOCX from "../assets/docx.png";
+import IMG from "../assets/img.png";
+import MOV from "../assets/mov.png";
 import LatestPostCardOpen, { type LatestPostCardDataOpen } from "./LatestPostCardOpen";
 
 const feature: LatestPostCardDataOpen[] = [
@@ -51,7 +50,7 @@ const feature: LatestPostCardDataOpen[] = [
 function LatestPost() {
   return (
     <>
-      <VStack mx={"6%"} mb={"30px"} alignItems="stretch">
+      <VStack mx={"6%"} mb={"40px"} alignItems="stretch">
         <HStack justifyContent={"space-between"} width={"100%"}>
           <Button fontFamily={fonts.body} fontSize={13} color={colors.dark}>
             مشاهده همه
