@@ -1,9 +1,8 @@
 import { HStack } from "@chakra-ui/react";
-import FeatureCard, { type cardData } from "./FeatureCard";
 import feature1 from "../assets/featurecard1.png";
 import feature2 from "../assets/featurecard2.png";
 import feature3 from "../assets/featurecard3.png";
-import { colors } from "@/utilities/colors";
+import FeatureCard, { type cardData } from "./FeatureCard";
 
 const feature: cardData[] = [
   {

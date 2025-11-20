@@ -1,8 +1,8 @@
-import { Button, Grid, GridItem } from "@chakra-ui/react";
-import NavBar from "./components/NavBar";
-import HeroBox from "./components/HeroBox";
-import FeatureCard from "./components/FeatureCard";
+import { Grid, GridItem } from "@chakra-ui/react";
 import Features from "./components/Features";
+import HeroBox from "./components/HeroBox";
+import NavBar from "./components/NavBar";
+import  LatestPost from "./components/LatestPost";
 
 function App() {
   return (
@@ -14,6 +14,7 @@ function App() {
       <GridItem area="main">
         <HeroBox />
         <Features />
+        <LatestPost />
       </GridItem>
     </Grid>
   );
