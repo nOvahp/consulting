@@ -2,8 +2,10 @@ import { Grid, GridItem } from "@chakra-ui/react";
 import Features from "./components/Features";
 import HeroBox from "./components/HeroBox";
 import NavBar from "./components/NavBar";
-import  LatestPost from "./components/LatestPost";
+import LatestPost from "./components/LatestPost";
 import FAQ from "./components/FAQ";
+import Activation from "./components/activation";
+import Address from "./components/Address";
 
 function App() {
   return (
@@ -17,6 +19,8 @@ function App() {
         <Features />
         <LatestPost />
         <FAQ />
+        <Activation />
+        <Address />
       </GridItem>
     </Grid>
   );

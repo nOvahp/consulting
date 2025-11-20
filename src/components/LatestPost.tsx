@@ -50,7 +50,7 @@ const feature: LatestPostCardDataOpen[] = [
 function LatestPost() {
   return (
     <>
-      <VStack mx={"6%"} mb={"40px"} alignItems="stretch">
+      <VStack mx={"6%"} mb={"65px"} alignItems="stretch">
         <HStack justifyContent={"space-between"} width={"100%"}>
           <Button fontFamily={fonts.body} fontSize={13} color={colors.dark}>
             مشاهده همه
