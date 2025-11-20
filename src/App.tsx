@@ -6,6 +6,7 @@ import LatestPost from "./components/LatestPost";
 import FAQ from "./components/FAQ";
 import Activation from "./components/activation";
 import Address from "./components/Address";
+import OurGoal from "./components/ourGoal";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
         <FAQ />
         <Activation />
         <Address />
+        <OurGoal />
       </GridItem>
     </Grid>
   );
