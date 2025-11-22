@@ -27,22 +27,15 @@ const feature: cardData[] = [
 
 function Features() {
   return (
-    <HStack mx={"6%"} mb={"65px"} >
-      <FeatureCard
-        title={feature[0].title}
-        description={feature[0].description}
-        image={feature[0].image}
-      />
-      <FeatureCard
-        title={feature[1].title}
-        description={feature[1].description}
-        image={feature[1].image}
-      />
-      <FeatureCard
-        title={feature[2].title}
-        description={feature[2].description}
-        image={feature[2].image}
-      />
+    <HStack mx={"6%"} mb={"65px"}>
+      {feature.map((item, index) => (
+        <FeatureCard
+          key={`${item.title}-${index}`}
+          title={item.title}
+          description={item.description}
+          image={item.image}
+        />
+      ))}
     </HStack>
   );
 }

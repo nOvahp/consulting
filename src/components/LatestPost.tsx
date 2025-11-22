@@ -59,41 +59,21 @@ function LatestPost() {
             آخرین مطالب
           </Text>
         </HStack>
+        {feature.map((item, index) => (
         <LatestPostCardOpen
-          date={feature[0].date}
-          title={feature[0].title}
-          description={feature[0].description}
-          image={feature[0].image}
-          subTitle={feature[0].subTitle}
-          place={feature[0].place}
-          shareImage={feature[0].shareImage}
-          View={feature[0].View}
-          like={feature[0].like}
-
+          key={`${item.title}-${index}`}
+          date={item.date}
+          title={item.title}
+          description={item.description}
+          image={item.image}
+          subTitle={item.subTitle}
+          place={item.place}
+          shareImage={item.shareImage}
+          View={item.View}
+          like={item.like}
         />
-        <LatestPostCardOpen
-          date={feature[1].date}
-          title={feature[1].title}
-          description={feature[1].description}
-          image={feature[1].image}
-          subTitle={feature[1].subTitle}
-          place={feature[1].place}
-          shareImage={feature[1].shareImage}
-          View={feature[1].View}
-          like={feature[1].like}
-        />
-        <LatestPostCardOpen
-          date={feature[2].date}
-          title={feature[2].title}
-          description={feature[2].description}
-          image={feature[2].image}
-          subTitle={feature[2].subTitle}
-          place={feature[2].place}
-          shareImage={feature[2].shareImage}
-          View={feature[2].View}
-          like={feature[2].like}
-
-        />
+      ))}
+        
       </VStack>
     </>
   );
