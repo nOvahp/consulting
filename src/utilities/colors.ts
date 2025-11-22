@@ -4,6 +4,9 @@ export const colors = {
   dark:"#6A7980",
   background: "#FDFCF8",
   border: "gray.200",
+  footerBorder: "#3B3B3B",
+  footerText: "#9D9D9D",
+  footer: "#06202B",
   button: {
     transparent: "transparent",
     default: "blue.500",

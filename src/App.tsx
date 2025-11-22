@@ -1,12 +1,15 @@
 import { Grid, GridItem } from "@chakra-ui/react";
-import Features from "./components/Features";
-import HeroBox from "./components/HeroBox";
-import NavBar from "./components/NavBar";
-import LatestPost from "./components/LatestPost";
-import FAQ from "./components/FAQ";
 import Activation from "./components/activation";
 import Address from "./components/Address";
+import FAQ from "./components/FAQ";
+import Features from "./components/Features";
+
+import HeroBox from "./components/HeroBox";
+import LatestPost from "./components/LatestPost";
+import NavBar from "./components/NavBar";
 import OurGoal from "./components/ourGoal";
+import Footer from "./components/Footer";
+
 
 function App() {
   return (
@@ -23,6 +26,7 @@ function App() {
         <Activation />
         <Address />
         <OurGoal />
+        <Footer />
       </GridItem>
     </Grid>
   );
