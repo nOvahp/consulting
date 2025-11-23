@@ -1,19 +1,24 @@
-import Footer from '@/components/Footer'
-import NavBar from '@/components/NavBar'
-import { Outlet } from 'react-router-dom'
+import Footer from "@/components/Footer";
+import NavBar from "@/components/NavBar";
+import MobileNav from "@/components/MobileNav";
+import { Box } from "@chakra-ui/react";
+import { Outlet } from "react-router-dom";
 
 const Layout = () => {
   return (
     <>
-    <NavBar />
-    <div id="main">
+      <Box hideBelow="lg">
+        <NavBar />
+      </Box>
+      <Box hideFrom="lg">
+        <MobileNav />
+      </Box>
+      <div id="main">
         <Outlet />
-    </div>
-    <Footer />
+      </div>
+      <Footer />
     </>
+  );
+};
 
-
-  )
-}
-
-export default Layout
+export default Layout;

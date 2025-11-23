@@ -10,7 +10,7 @@ import { Grid, GridItem } from '@chakra-ui/react'
 
 const HomePage = () => {
   return (
-    <Grid templateAreas={`"main"`}>
+    <Grid templateAreas={` "main"`}>
       <GridItem area="nav" hideBelow="lg">
         
       </GridItem>

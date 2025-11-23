@@ -1,4 +1,4 @@
-import { HStack } from "@chakra-ui/react";
+import { SimpleGrid } from "@chakra-ui/react";
 import feature1 from "../assets/featurecard1.png";
 import feature2 from "../assets/featurecard2.png";
 import feature3 from "../assets/featurecard3.png";
@@ -27,7 +27,7 @@ const feature: cardData[] = [
 
 function Features() {
   return (
-    <HStack mx={"6%"} mb={"65px"}>
+    <SimpleGrid columns={{ base: 1, lg: 3 }} gap={4} mx={"6%"} mb={"65px"}>
       {feature.map((item, index) => (
         <FeatureCard
           key={`${item.title}-${index}`}
@@ -36,7 +36,7 @@ function Features() {
           image={item.image}
         />
       ))}
-    </HStack>
+    </SimpleGrid>
   );
 }
 
