@@ -13,28 +13,21 @@ const MobileNav = () => {
 
   return (
     <>
-      <Box
-        position="sticky"
+      <IconButton
+        aria-label="Open menu"
+        onClick={toggleMenu}
+        position="fixed"
         top="20px"
-        display="flex"
-        justifyContent="flex-end"
-        mr="6%"
-        mt="20px"
-        mb="20px"
+        right="6%"
         zIndex={1000}
+        bg={colors.button.transparent}
+        color={colors.black}
+        _hover={{ bg: colors.button.secondory }}
+        borderRadius="50%"
+        boxShadow="0 2px 8px rgba(0, 0, 0, 0.15)"
       >
-        <IconButton
-          aria-label="Open menu"
-          onClick={toggleMenu}
-          bg={colors.button.transparent}
-          color={colors.black}
-          _hover={{ bg: colors.button.secondory }}
-          borderRadius="50%"
-          boxShadow="0 2px 8px rgba(0, 0, 0, 0.15)"
-        >
-          {isOpen ? <X size={24} /> : <Menu size={24} />}
-        </IconButton>
-      </Box>
+        {isOpen ? <X size={24} /> : <Menu size={24} />}
+      </IconButton>
 
       {/* Full Screen Menu */}
       {isOpen && (
@@ -55,7 +48,7 @@ const MobileNav = () => {
             borderBottomWidth="1px"
             borderBottomColor={colors.border}
             display="flex"
-            justifyContent="space-between"
+            justifyContent="flex-start"
             alignItems="center"
           >
             <Link
@@ -70,14 +63,6 @@ const MobileNav = () => {
             >
               سامانه مشاور
             </Link>
-            <IconButton
-              aria-label="Close menu"
-              onClick={closeMenu}
-              bg={colors.button.transparent}
-              size="md"
-            >
-              <X size={24} />
-            </IconButton>
           </Box>
 
           <Box p="30px">

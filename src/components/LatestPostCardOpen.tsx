@@ -211,7 +211,7 @@ function LatestPostCardOpen({
         <Image
           marginLeft="0%"
           src={image}
-          width={{ base: "40px", sm: "50px", md: "60px", lg: "70px" }}
+          width={{ base: "40px", sm: "40px", md: "50px", lg: "60px", xl: "70px" }}
           height="auto"
           flexShrink={0}
           transition="transform 0.2s ease, box-shadow 0.2s ease"

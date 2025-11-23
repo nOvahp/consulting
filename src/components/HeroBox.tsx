@@ -6,6 +6,7 @@ const HeroBox = () => {
   return (
     <Box
       mx="6%"
+      mt={{ base: "2%", lg: 0 }}
       mb={"30px"}
       borderWidth={0}
       borderRadius={12}
@@ -54,7 +55,7 @@ const HeroBox = () => {
         </Text>
         <Text
           fontFamily={fonts.extraBold}
-          fontSize={{ base: 24, md: 40, lg: 64 }}
+          fontSize={{ base: 24, md: 40, lg: 50, xl: 64 }}
           color="white"
           textAlign="right"
           lineHeight="1.2"
