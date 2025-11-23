@@ -114,7 +114,7 @@ function LatestPostCardOpen({
                 color={colors.dark}
                 gap={{ base: 2, md: 0 }}
               >
-                <Box flex={1} width={{ base: "100%", md: "auto" }}>
+                <Box  width={{ base: "100%", md: "auto" }}>
                   <HStack gap={4} justifyContent="flex-end">
                     <Text
                       fontFamily={fonts.bold}

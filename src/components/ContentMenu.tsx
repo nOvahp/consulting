@@ -13,8 +13,19 @@ const menuItems = [
   "پروتکل های سطحبندی",
 ];
 
-const ContentMenu = () => {
+interface ContentMenuProps {
+  onCategoryChange?: (category: string) => void;
+}
+
+const ContentMenu = ({ onCategoryChange }: ContentMenuProps) => {
   const [selectedItem, setSelectedItem] = useState("شیوه نامه ها");
+
+  const handleItemClick = (item: string) => {
+    setSelectedItem(item);
+    if (onCategoryChange) {
+      onCategoryChange(item);
+    }
+  };
 
   return (
     <VStack alignItems="flex-end" gap={4} width="100%">
@@ -39,7 +50,7 @@ const ContentMenu = () => {
             py={2}
             borderRadius={8}
             cursor="pointer"
-            onClick={() => setSelectedItem(item)}
+            onClick={() => handleItemClick(item)}
             _hover={{
               bg:
                 selectedItem === item
