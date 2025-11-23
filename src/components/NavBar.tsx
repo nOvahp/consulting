@@ -1,4 +1,4 @@
-import { Box, Button, HStack } from "@chakra-ui/react";
+import { Box, HStack } from "@chakra-ui/react";
 import { colors } from "../utilities/colors";
 import { fonts } from "../utilities/font";
 import { Link } from "react-router-dom";
@@ -21,65 +21,161 @@ const NavBar = () => {
         gap={2}
         flexWrap="nowrap"
       >
-        <Button
-          bg={colors.button.solid}
-          color={"white"}
-          borderRadius={10}
-          px={{ base: 4, md: 5 }}
-          fontSize={{ base: 12, md: 13, lg: 14}}
-          whiteSpace="nowrap"
+        <Link
+          to="/account"
+          style={{
+            fontFamily: fonts.body,
+            fontSize: "clamp(12px, 1vw, 14px)",
+            color: colors.white,
+            textDecoration: "none",
+            backgroundColor: colors.button.solid,
+            padding: "8px 16px",
+            borderRadius: "10px",
+            whiteSpace: "nowrap",
+            transition: "all 0.2s",
+          }}
+          onMouseEnter={(e) => {
+            e.currentTarget.style.opacity = "0.9";
+          }}
+          onMouseLeave={(e) => {
+            e.currentTarget.style.opacity = "1";
+          }}
         >
           حساب کاربری
-        </Button>
+        </Link>
         <HStack gap={1} flexWrap="nowrap" justifyContent="center">
-          <Button
-            bg={colors.button.transparent}
-            fontSize={{ base: 11, md: 12, lg: 13, xl: 15 }}
-            px={{ base: 2, md: 3 }}
-            whiteSpace="nowrap"
+          <Link
+            to="/faq"
+            style={{
+              fontFamily: fonts.body,
+              fontSize: "clamp(11px, 1vw, 15px)",
+              color: colors.black,
+              textDecoration: "none",
+              backgroundColor: colors.button.transparent,
+              padding: "6px 12px",
+              borderRadius: "8px",
+              whiteSpace: "nowrap",
+              transition: "all 0.2s",
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.opacity = "0.7";
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.opacity = "1";
+            }}
           >
             سوالات متداول
-          </Button>
-          <Button
-            bg={colors.button.transparent}
-            fontSize={{ base: 11, md: 12, lg: 13, xl: 15 }}
-            px={{ base: 2, md: 3 }}
-            whiteSpace="nowrap"
+          </Link>
+          <Link
+            to="/surveys"
+            style={{
+              fontFamily: fonts.body,
+              fontSize: "clamp(11px, 1vw, 15px)",
+              color: colors.black,
+              textDecoration: "none",
+              backgroundColor: colors.button.transparent,
+              padding: "6px 12px",
+              borderRadius: "8px",
+              whiteSpace: "nowrap",
+              transition: "all 0.2s",
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.opacity = "0.7";
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.opacity = "1";
+            }}
           >
             نظرسنجی ها
-          </Button>
-          <Button
-            bg={colors.button.transparent}
-            fontSize={{ base: 11, md: 12, lg: 13, xl: 15 }}
-            px={{ base: 2, md: 3 }}
-            whiteSpace="nowrap"
+          </Link>
+          <Link
+            to="/reports"
+            style={{
+              fontFamily: fonts.body,
+              fontSize: "clamp(11px, 1vw, 15px)",
+              color: colors.black,
+              textDecoration: "none",
+              backgroundColor: colors.button.transparent,
+              padding: "6px 12px",
+              borderRadius: "8px",
+              whiteSpace: "nowrap",
+              transition: "all 0.2s",
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.opacity = "0.7";
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.opacity = "1";
+            }}
           >
             گزارش های جامع
-          </Button>
-          <Button
-            bg={colors.button.transparent}
-            fontSize={{ base: 11, md: 12, lg: 13, xl: 15 }}
-            px={{ base: 2, md: 3 }}
-            whiteSpace="nowrap"
+          </Link>
+          <Link
+            to="/contact"
+            style={{
+              fontFamily: fonts.body,
+              fontSize: "clamp(11px, 1vw, 15px)",
+              color: colors.black,
+              textDecoration: "none",
+              backgroundColor: colors.button.transparent,
+              padding: "6px 12px",
+              borderRadius: "8px",
+              whiteSpace: "nowrap",
+              transition: "all 0.2s",
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.opacity = "0.7";
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.opacity = "1";
+            }}
           >
             ارتباط با مشاور
-          </Button>
-          <Button
-            bg={colors.button.transparent}
-            fontSize={{ base: 11, md: 12, lg: 13, xl: 15 }}
-            px={{ base: 2, md: 3 }}
-            whiteSpace="nowrap"
+          </Link>
+          <Link
+            to="/guide"
+            style={{
+              fontFamily: fonts.body,
+              fontSize: "clamp(11px, 1vw, 15px)",
+              color: colors.black,
+              textDecoration: "none",
+              backgroundColor: colors.button.transparent,
+              padding: "6px 12px",
+              borderRadius: "8px",
+              whiteSpace: "nowrap",
+              transition: "all 0.2s",
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.opacity = "0.7";
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.opacity = "1";
+            }}
           >
             راهنمای هوشمند
-          </Button>
-          <Button
-            bg={colors.button.transparent}
-            fontSize={{ base: 11, md: 12, lg: 13, xl: 15 }}
-            px={{ base: 2, md: 3 }}
-            whiteSpace="nowrap"
+          </Link>
+          <Link
+            to="/content"
+            style={{
+              fontFamily: fonts.body,
+              fontSize: "clamp(11px, 1vw, 15px)",
+              color: colors.black,
+              textDecoration: "none",
+              backgroundColor: colors.button.transparent,
+              padding: "6px 12px",
+              borderRadius: "8px",
+              whiteSpace: "nowrap",
+              transition: "all 0.2s",
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.opacity = "0.7";
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.opacity = "1";
+            }}
           >
             مطالب آموزشی
-          </Button>
+          </Link>
         </HStack>
         <Link
           to="/"

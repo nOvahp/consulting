@@ -9,7 +9,7 @@ const ContentSearch = () => {
       bg={colors.background}
       borderRadius={12}
       borderWidth={2}
-      borderColor={colors.dark}
+      borderColor={colors.border}
       placeholder={"جستجو در عنوان مطالب و محتوا"}
       _placeholder={{ color: colors.dark, textAlign: "right" }}
       textAlign="right"
