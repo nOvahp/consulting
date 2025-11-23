@@ -1,7 +1,6 @@
 import { colors } from "@/utilities/colors";
 import { Button, Icon } from "@chakra-ui/react";
 import { Filter } from "lucide-react";
-import React from "react";
 
 const ContentFilter = () => {
   return (

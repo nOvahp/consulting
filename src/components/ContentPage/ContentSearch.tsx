@@ -1,7 +1,22 @@
 import { colors } from "@/utilities/colors";
 import { Input } from "@chakra-ui/react";
+import { useState } from "react";
 
-const ContentSearch = () => {
+interface ContentSearchProps {
+  onSearchChange?: (searchQuery: string) => void;
+}
+
+const ContentSearch = ({ onSearchChange }: ContentSearchProps) => {
+  const [searchQuery, setSearchQuery] = useState("");
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const value = e.target.value;
+    setSearchQuery(value);
+    if (onSearchChange) {
+      onSearchChange(value);
+    }
+  };
+
   return (
     <Input
       type="text"
@@ -16,6 +31,8 @@ const ContentSearch = () => {
       color={colors.black}
       flex="1"
       minWidth="50%"
+      value={searchQuery}
+      onChange={handleChange}
     />
   );
 };

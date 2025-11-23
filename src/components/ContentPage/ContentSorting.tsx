@@ -27,7 +27,7 @@ const ContentSorting = ({ onSortChange }: ContentSortingProps) => {
         backgroundColor: colors.background,
         borderRadius: "10px",
         borderWidth: "2px",
-        borderColor: colors.border,
+        borderColor: "#E2E8F0",
         borderStyle: "solid",
         color: colors.dark,
         fontFamily: fonts.body,
@@ -37,10 +37,11 @@ const ContentSorting = ({ onSortChange }: ContentSortingProps) => {
         outline: "none",
       }}
       onFocus={(e) => {
-        e.target.style.borderColor = colors.border;
+        e.target.style.borderColor = colors.button.solid;
+        e.target.style.boxShadow = `0 0 0 1px ${colors.button.solid}`;
       }}
       onBlur={(e) => {
-        e.target.style.borderColor = colors.border;
+        e.target.style.borderColor = "#E2E8F0";
         e.target.style.boxShadow = "none";
       }}
     >

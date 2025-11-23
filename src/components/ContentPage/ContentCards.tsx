@@ -1,20 +1,19 @@
 import { VStack, Box } from "@chakra-ui/react";
 import { useMemo } from "react";
-import LatestPostCardOpen from "./LatestPostCardOpen";
+import LatestPostCardOpen from "../LatestPostCardOpen";
 import { type SortOption } from "./ContentSorting";
 import { contentMockData } from "./ContentMockData";
 
 interface ContentCardsProps {
   sortBy?: SortOption;
   selectedCategory?: string;
+  searchQuery?: string;
 }
-
 
 const extractNumber = (text: string): number => {
   const match = text.match(/\d+(\.\d+)?/);
   return match ? parseFloat(match[0]) : 0;
 };
-
 
 const getFileType = (image: string): string => {
   if (image.includes("docx")) return "DOCX";
@@ -23,9 +22,7 @@ const getFileType = (image: string): string => {
   return "UNKNOWN";
 };
 
-
 const parsePersianDate = (date: string): number => {
-  
   const parts = date.split(" ");
   const day = parseInt(
     parts[0].replace(/[۰-۹]/g, (d) => "۰۱۲۳۴۵۶۷۸۹".indexOf(d).toString())
@@ -54,10 +51,23 @@ const parsePersianDate = (date: string): number => {
 function ContentCards({
   sortBy = "name",
   selectedCategory = "شیوه نامه ها",
+  searchQuery = "",
 }: ContentCardsProps) {
   const sortedFeature = useMemo(() => {
     const feature = contentMockData[selectedCategory] || [];
-    const sorted = [...feature];
+
+   
+    let filtered = feature;
+    if (searchQuery.trim()) {
+      const query = searchQuery.trim().toLowerCase();
+      filtered = feature.filter((item) => {
+        const titleMatch = item.title.toLowerCase().includes(query);
+        const descriptionMatch = item.description.toLowerCase().includes(query);
+        return titleMatch || descriptionMatch;
+      });
+    }
+
+    const sorted = [...filtered];
 
     switch (sortBy) {
       case "name":
@@ -89,7 +99,7 @@ function ContentCards({
     }
 
     return sorted;
-  }, [sortBy, selectedCategory]);
+  }, [sortBy, selectedCategory, searchQuery]);
 
   return (
     <>

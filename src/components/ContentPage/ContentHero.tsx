@@ -1,7 +1,7 @@
-import { Box, Button, Image, Text, VStack } from "@chakra-ui/react";
-import contentHero from "../assets/contentHero.png";
-import { fonts } from "@/utilities/font";
 import { colors } from "@/utilities/colors";
+import { fonts } from "@/utilities/font";
+import { Box, Image, Text, VStack } from "@chakra-ui/react";
+import contentHero from "../../assets/contentHero.png";
 
 const ContentHero = () => {
   return (

@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Box, Button, IconButton, VStack } from "@chakra-ui/react";
+import { Box, IconButton, VStack } from "@chakra-ui/react";
 import { Menu, X } from "lucide-react";
 import { colors } from "../utilities/colors";
 import { fonts } from "../utilities/font";
@@ -29,7 +29,6 @@ const MobileNav = () => {
         {isOpen ? <X size={24} /> : <Menu size={24} />}
       </IconButton>
 
-      {/* Full Screen Menu */}
       {isOpen && (
         <Box
           position="fixed"
@@ -66,80 +65,177 @@ const MobileNav = () => {
           </Box>
 
           <Box p="30px">
-            <VStack gap={6} alignItems="stretch">
-              <Button
-                bg={colors.button.solid}
-                color={colors.white}
-                fontFamily={fonts.body}
-                fontSize="18px"
-                py="30px"
-                borderRadius={10}
+            <VStack gap={3} alignItems="stretch">
+              <Link
+                to="/account"
                 onClick={closeMenu}
+                style={{
+                  fontFamily: fonts.body,
+                  fontSize: "18px",
+                  color: colors.white,
+                  textDecoration: "none",
+                  backgroundColor: colors.button.solid,
+                  padding: "10px",
+                  borderRadius: "10px",
+                  textAlign: "center",
+                  display: "block",
+                  transition: "all 0.2s",
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.opacity = "0.9";
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.opacity = "1";
+                }}
               >
                 حساب کاربری
-              </Button>
+              </Link>
 
-              <VStack gap={3} alignItems="stretch">
-                <Button
-                  bg={colors.button.transparent}
-                  fontFamily={fonts.body}
-                  fontSize="18px"
-                  py="25px"
-                  textAlign="right"
+              <VStack gap={0} alignItems="center">
+                <Link
+                  to="/faq"
                   onClick={closeMenu}
+                  style={{
+                    fontFamily: fonts.body,
+                    fontSize: "18px",
+                    color: colors.black,
+                    textDecoration: "none",
+                    backgroundColor: colors.button.transparent,
+                    padding: "15px",
+                    borderRadius: "8px",
+                    textAlign: "right",
+                    display: "block",
+                    transition: "all 0.2s",
+                  }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.opacity = "0.7";
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.opacity = "1";
+                  }}
                 >
                   سوالات متداول
-                </Button>
-                <Button
-                  bg={colors.button.transparent}
-                  fontFamily={fonts.body}
-                  fontSize="18px"
-                  py="25px"
-                  textAlign="right"
+                </Link>
+                <Link
+                  to="/surveys"
                   onClick={closeMenu}
+                  style={{
+                    fontFamily: fonts.body,
+                    fontSize: "18px",
+                    color: colors.black,
+                    textDecoration: "none",
+                    backgroundColor: colors.button.transparent,
+                    padding: "15px",
+                    borderRadius: "8px",
+                    textAlign: "right",
+                    display: "block",
+                    transition: "all 0.2s",
+                  }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.opacity = "0.7";
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.opacity = "1";
+                  }}
                 >
                   نظرسنجی ها
-                </Button>
-                <Button
-                  bg={colors.button.transparent}
-                  fontFamily={fonts.body}
-                  fontSize="18px"
-                  py="25px"
-                  textAlign="right"
+                </Link>
+                <Link
+                  to="/reports"
                   onClick={closeMenu}
+                  style={{
+                    fontFamily: fonts.body,
+                    fontSize: "18px",
+                    color: colors.black,
+                    textDecoration: "none",
+                    backgroundColor: colors.button.transparent,
+                    padding: "15px",
+                    borderRadius: "8px",
+                    textAlign: "right",
+                    display: "block",
+                    transition: "all 0.2s",
+                  }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.opacity = "0.7";
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.opacity = "1";
+                  }}
                 >
                   گزارش های جامع
-                </Button>
-                <Button
-                  bg={colors.button.transparent}
-                  fontFamily={fonts.body}
-                  fontSize="18px"
-                  py="25px"
-                  textAlign="right"
+                </Link>
+                <Link
+                  to="/contact"
                   onClick={closeMenu}
+                  style={{
+                    fontFamily: fonts.body,
+                    fontSize: "18px",
+                    color: colors.black,
+                    textDecoration: "none",
+                    backgroundColor: colors.button.transparent,
+                    padding: "15px",
+                    borderRadius: "8px",
+                    textAlign: "right",
+                    display: "block",
+                    transition: "all 0.2s",
+                  }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.opacity = "0.7";
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.opacity = "1";
+                  }}
                 >
                   ارتباط با مشاور
-                </Button>
-                <Button
-                  bg={colors.button.transparent}
-                  fontFamily={fonts.body}
-                  fontSize="18px"
-                  py="25px"
-                  textAlign="right"
+                </Link>
+                <Link
+                  to="/guide"
                   onClick={closeMenu}
+                  style={{
+                    fontFamily: fonts.body,
+                    fontSize: "18px",
+                    color: colors.black,
+                    textDecoration: "none",
+                    backgroundColor: colors.button.transparent,
+                    padding: "15px",
+                    borderRadius: "8px",
+                    textAlign: "right",
+                    display: "block",
+                    transition: "all 0.2s",
+                  }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.opacity = "0.7";
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.opacity = "1";
+                  }}
                 >
                   راهنمای هوشمند
-                </Button>
-                <Button
-                  bg={colors.button.transparent}
-                  fontFamily={fonts.body}
-                  fontSize="18px"
-                  py="25px"
-                  textAlign="right"
+                </Link>
+                <Link
+                  to="/content"
                   onClick={closeMenu}
+                  style={{
+                    fontFamily: fonts.body,
+                    fontSize: "18px",
+                    color: colors.black,
+                    textDecoration: "none",
+                    backgroundColor: colors.button.transparent,
+                    padding: "15px",
+                    borderRadius: "8px",
+                    textAlign: "right",
+                    display: "block",
+                    transition: "all 0.2s",
+                  }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.opacity = "0.7";
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.opacity = "1";
+                  }}
                 >
                   مطالب آموزشی
-                </Button>
+                </Link>
               </VStack>
             </VStack>
           </Box>
