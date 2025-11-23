@@ -40,7 +40,7 @@ function FAQCard({ title, description }: FAQCardData) {
         <Icon
           as={isExpanded ? Minus : Plus}
           color={colors.dark}
-          fontSize="20px"
+          fontSize={{ base: "16px", md: "18px", lg: "20px" }}
           transition="transform 0.2s ease"
         />
         <VStack
@@ -52,7 +52,7 @@ function FAQCard({ title, description }: FAQCardData) {
         >
           <Text
             fontFamily={fonts.bold}
-            fontSize={15}
+            fontSize={{ base: 13, md: 14, lg: 15 }}
             color="black"
             textAlign="right"
             wordBreak="break-word"
@@ -66,7 +66,7 @@ function FAQCard({ title, description }: FAQCardData) {
           {isExpanded && (
             <Text
               fontFamily={fonts.body}
-              fontSize={14}
+              fontSize={{ base: 12, md: 13, lg: 14 }}
               color={colors.dark}
               textAlign="right"
               wordBreak="break-word"
@@ -80,7 +80,11 @@ function FAQCard({ title, description }: FAQCardData) {
           )}
         </VStack>
 
-        <Icon as={FileQuestionMark} color={colors.dark} fontSize="32px" />
+        <Icon 
+          as={FileQuestionMark} 
+          color={colors.dark} 
+          fontSize={{ base: "24px", md: "28px", lg: "32px" }} 
+        />
       </HStack>
     </Box>
   );

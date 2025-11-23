@@ -30,7 +30,7 @@ const HeroBox = () => {
         width="100%"
         height="100%"
         background={{
-          base: "linear-gradient(180deg, rgba(122, 226, 207, 0) 0%, #7AE2CF 100%)",
+          base: "linear-gradient(0deg, rgba(122, 226, 207, 0) 0%, #7AE2CF 60%)",
           md: "linear-gradient(90deg, rgba(122, 226, 207, 0) 0%, #7AE2CF 60%)",
         }}
         pointerEvents="none"

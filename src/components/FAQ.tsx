@@ -81,10 +81,18 @@ function FAQ() {
     <>
       <VStack mx={"6%"} mb={"65px"} alignItems="stretch">
         <HStack justifyContent={"space-between"} width={"100%"}>
-          <Button fontFamily={fonts.body} fontSize={13} color={colors.dark}>
+          <Button 
+            fontFamily={fonts.body} 
+            fontSize={{ base: 11, md: 12, lg: 13 }} 
+            color={colors.dark}
+          >
             مشاهده همه
           </Button>
-          <Text color={colors.black} fontFamily={fonts.bold} fontSize={20}>
+          <Text 
+            color={colors.black} 
+            fontFamily={fonts.bold} 
+            fontSize={{ base: 16, md: 18, lg: 20 }}
+          >
             سوالات متداول
           </Text>
         </HStack>

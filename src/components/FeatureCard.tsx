@@ -21,7 +21,7 @@ function FeatureCard({ title, description, image }: cardData) {
       <VStack alignItems="flex-end" flex="1">
         <Text
           fontFamily={fonts.bold}
-          fontSize={24}
+          fontSize={{ base: 16, md: 20, lg: 24 }}
           color="black"
           textAlign="right"
         >
@@ -29,14 +29,19 @@ function FeatureCard({ title, description, image }: cardData) {
         </Text>
         <Text
           fontFamily={fonts.body}
-          fontSize={16}
+          fontSize={{ base: 12, md: 14, lg: 16 }}
           color="black"
           textAlign="right"
         >
           {description}
         </Text>
       </VStack>
-      <Image marginLeft="3%" src={image} width="50px" height="auto" />
+      <Image
+        marginLeft="3%"
+        src={image}
+        width={{ base: "40px", md: "45px", lg: "50px" }}
+        height="auto"
+      />
     </HStack>
   );
 }
