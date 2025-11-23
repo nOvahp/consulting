@@ -1,6 +1,7 @@
 import { Box, Button, HStack } from "@chakra-ui/react";
 import { colors } from "../utilities/colors";
 import { fonts } from "../utilities/font";
+import { Link } from "react-router-dom";
 
 const NavBar = () => {
   return (
@@ -31,13 +32,27 @@ const NavBar = () => {
           <Button bg={colors.button.transparent}>راهنمای هوشمند</Button>
           <Button bg={colors.button.transparent}>مطالب آموزشی</Button>
         </Box>
-        <Button
-          bg={colors.button.transparent}
-          fontFamily={fonts.black}
-          fontSize="20px"
+        <Link
+          to="/"
+          style={{
+            fontFamily: fonts.black,
+            fontSize: "20px",
+            color: colors.black,
+            textDecoration: "none",
+            backgroundColor: colors.button.transparent,
+            padding: "8px 16px",
+            borderRadius: "8px",
+            transition: "all 0.2s",
+          }}
+          onMouseEnter={(e) => {
+            e.currentTarget.style.opacity = "0.5";
+          }}
+          onMouseLeave={(e) => {
+            e.currentTarget.style.opacity = "1";
+          }}
         >
           سامانه مشاور
-        </Button>
+        </Link>
       </HStack>
     </Box>
   );

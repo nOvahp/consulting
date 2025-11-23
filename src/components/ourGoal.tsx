@@ -1,7 +1,6 @@
 import { colors } from '@/utilities/colors'
 import { fonts } from '@/utilities/font'
 import { Box, Text } from '@chakra-ui/react'
-import React from 'react'
 
 function OurGoal() {
   return (
