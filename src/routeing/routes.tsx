@@ -1,4 +1,5 @@
 import Contents from "@/assets/pages/Contents";
+import FAQPage from "@/assets/pages/FAQPage";
 import HomePage from "@/assets/pages/HomePage";
 import Layout from "@/assets/pages/Layout";
 import ErrorPage from "@/assets/pages/ٍErrorPage";
@@ -18,6 +19,10 @@ const router = createBrowserRouter([
         path: "content",
         element: <Contents />,
       },
+      {
+        path: "faq",
+        element: <FAQPage />
+      }
     ],
   },
 ]);
