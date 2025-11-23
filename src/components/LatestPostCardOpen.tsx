@@ -9,6 +9,7 @@ import {
   Image,
   Box,
   Icon,
+  Stack,
 } from "@chakra-ui/react";
 import { CloudDownload } from "lucide-react";
 import { FileOutput } from "lucide-react";
@@ -40,7 +41,13 @@ function LatestPostCardOpen({
   const [isExpanded, setIsExpanded] = useState(false);
 
   return (
-    <Box width="100%" padding={0} height="auto" justifyContent={"flex-start"}>
+    <Box
+      width="100%"
+      padding={0}
+      height="auto"
+      justifyContent={"flex-start"}
+      overflow="hidden"
+    >
       <HStack
         borderRadius={12}
         borderWidth={2}
@@ -52,6 +59,7 @@ function LatestPostCardOpen({
         alignItems="flex-start"
         width={"100%"}
         minWidth={0}
+        overflow="hidden"
       >
         <VStack
           alignItems="flex-end"
@@ -74,7 +82,7 @@ function LatestPostCardOpen({
           </Text>
           <Text
             fontFamily={fonts.bold}
-            fontSize={24}
+            fontSize={{ base: 18, md: 24 }}
             color="black"
             textAlign="right"
             wordBreak="break-word"
@@ -86,7 +94,7 @@ function LatestPostCardOpen({
           </Text>
           <Text
             fontFamily={fonts.body}
-            fontSize={14}
+            fontSize={{ base: 12, md: 14 }}
             color={colors.dark}
             textAlign="right"
             wordBreak="break-word"
@@ -98,14 +106,16 @@ function LatestPostCardOpen({
           </Text>
           {isExpanded && (
             <>
-              <HStack
+              <Stack
+                direction={{ base: "column", md: "row" }}
                 width="100%"
                 justifyContent="space-between"
-                alignItems="center"
+                alignItems={{ base: "flex-end", md: "center" }}
                 color={colors.dark}
+                gap={{ base: 2, md: 0 }}
               >
-                <Box flex={1}>
-                  <HStack gap={4}>
+                <Box flex={1} width={{ base: "100%", md: "auto" }}>
+                  <HStack gap={4} justifyContent="flex-end">
                     <Text
                       fontFamily={fonts.bold}
                       fontSize={12}
@@ -131,14 +141,14 @@ function LatestPostCardOpen({
                     />
                   </HStack>
                 </Box>
-                <Box>
-                  <HStack gap={4}>
+                <Box width={{ base: "100%", md: "auto" }}>
+                  <HStack gap={4} justifyContent="flex-end">
                     <Text
                       fontFamily={fonts.bold}
                       fontSize={12}
                       color="black"
                       textAlign="right"
-                      whiteSpace="nowrap"
+                      whiteSpace={{ base: "normal", md: "nowrap" }}
                     >
                       {place}
                     </Text>
@@ -147,7 +157,7 @@ function LatestPostCardOpen({
                       fontSize={12}
                       color="black"
                       textAlign="right"
-                      whiteSpace="nowrap"
+                      whiteSpace={{ base: "normal", md: "nowrap" }}
                     >
                       {subTitle}
                     </Text>
@@ -160,27 +170,40 @@ function LatestPostCardOpen({
                     />
                   </HStack>
                 </Box>
-              </HStack>
-              <HStack
+              </Stack>
+              <Stack
+                direction={{ base: "column", md: "row" }}
                 width="100%"
                 justifyContent="space-between"
                 alignItems="center"
                 color={colors.dark}
                 gap={3}
               >
-                <Button bg={colors.button.Thirdly} flex={1} width="100%">
+                <Button
+                  bg={colors.button.Thirdly}
+                  flex={1}
+                  width={{ base: "100%", md: "auto" }}
+                >
                   چاپ فایل
                   <Icon as={Printer} />
                 </Button>
-                <Button bg={colors.button.secondory} flex={1} width="100%">
+                <Button
+                  bg={colors.button.secondory}
+                  flex={1}
+                  width={{ base: "100%", md: "auto" }}
+                >
                   مشاهده فایل
                   <Icon as={FileOutput} />
                 </Button>
-                <Button bg={colors.button.solid} flex={1} width="100%">
+                <Button
+                  bg={colors.button.solid}
+                  flex={1}
+                  width={{ base: "100%", md: "auto" }}
+                >
                   دانلود فایل
                   <Icon as={CloudDownload} />
                 </Button>
-              </HStack>
+              </Stack>
             </>
           )}
         </VStack>
@@ -188,7 +211,7 @@ function LatestPostCardOpen({
         <Image
           marginLeft="0%"
           src={image}
-          width="70px"
+          width={{ base: "40px", sm: "50px", md: "60px", lg: "70px" }}
           height="auto"
           flexShrink={0}
           transition="transform 0.2s ease, box-shadow 0.2s ease"

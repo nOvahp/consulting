@@ -1,19 +1,20 @@
 import { colors } from "@/utilities/colors";
 import { fonts } from "@/utilities/font";
-import { Box, HStack, Icon, VStack, Text } from "@chakra-ui/react";
+import { Box, HStack, Icon, VStack, Text, Stack } from "@chakra-ui/react";
 import { Phone, Mail, MapPin } from "lucide-react";
 
 function Address() {
   return (
     <Box mx="6%" mb={"65px"}>
-      <HStack>
+      <Stack direction={{ base: "column", md: "row" }} gap={0}>
         <HStack
-          borderRightWidth={2}
+          borderRightWidth={{ base: 0, md: 2 }}
+          borderBottomWidth={{ base: 2, md: 0 }}
           borderRightColor={colors.border}
+          borderBottomColor={colors.border}
           py="1%"
           px="5%"
           alignItems="center"
-          
           width="100%"
           minWidth={0}
         >
@@ -58,8 +59,10 @@ function Address() {
           />
         </HStack>
         <HStack
-          borderRightWidth={2}
+          borderRightWidth={{ base: 0, md: 2 }}
+          borderBottomWidth={{ base: 2, md: 0 }}
           borderRightColor={colors.border}
+          borderBottomColor={colors.border}
           py="1%"
           px="5%"
           alignItems="center"
@@ -106,13 +109,7 @@ function Address() {
             transition="transform 0.2s ease"
           />
         </HStack>
-        <HStack
-          py="1%"
-          px="5%"
-          alignItems="center"
-          width="100%"
-          minWidth={0}
-        >
+        <HStack py="1%" px="5%" alignItems="center" width="100%" minWidth={0}>
           <VStack
             alignItems="flex-end"
             flex="1"
@@ -153,7 +150,7 @@ function Address() {
             transition="transform 0.2s ease"
           />
         </HStack>
-      </HStack>
+      </Stack>
     </Box>
   );
 }

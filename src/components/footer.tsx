@@ -14,7 +14,12 @@ import { fonts } from "@/utilities/font";
 function Footer() {
   return (
     <Box px={"10%"} py={"5%"} borderTopWidth={2} bg={colors.footer}>
-      <HStack justifyContent="space-between" alignItems="center">
+      <HStack
+        justifyContent="space-between"
+        alignItems="center"
+        flexDirection={{ base: "column", md: "row" }}
+        gap={{ base: 4, md: 0 }}
+      >
         <HStack gap={4}>
           <Icon
             as={Instagram}
@@ -40,7 +45,7 @@ function Footer() {
         </HStack>
         <Text
           fontFamily={fonts.bold}
-          fontSize={28}
+          fontSize={{ base: 20, md: 24, lg: 28 }}
           color={colors.white}
           textAlign="right"
         >
@@ -53,12 +58,20 @@ function Footer() {
         mt="2%"
       />
 
-      <Grid templateColumns="repeat(5, 1fr)" gap={8} mt={"2%"}>
+      <Grid
+        templateColumns={{
+          base: "repeat(2, 1fr)",
+          md: "repeat(3, 1fr)",
+          lg: "repeat(5, 1fr)",
+        }}
+        gap={8}
+        mt={"2%"}
+      >
         <GridItem>
           <VStack alignItems="flex-end" gap={3}>
             <Text
               color={colors.white}
-              fontSize={18}
+              fontSize={{ base: 16, md: 18 }}
               fontFamily={fonts.semiBold}
               fontWeight="600"
               lineHeight="27px"
@@ -69,7 +82,7 @@ function Footer() {
             <VStack alignItems="flex-end" gap={2}>
               <Text
                 color={colors.footerText}
-                fontSize={18}
+                fontSize={{ base: 14, md: 18 }}
                 fontFamily={fonts.body}
                 fontWeight="400"
                 lineHeight="27px"
@@ -81,7 +94,7 @@ function Footer() {
               </Text>
               <Text
                 color={colors.footerText}
-                fontSize={18}
+                fontSize={{ base: 14, md: 18 }}
                 fontFamily={fonts.body}
                 fontWeight="400"
                 lineHeight="27px"
@@ -93,7 +106,7 @@ function Footer() {
               </Text>
               <Text
                 color={colors.footerText}
-                fontSize={18}
+                fontSize={{ base: 14, md: 18 }}
                 fontFamily={fonts.body}
                 fontWeight="400"
                 lineHeight="27px"
@@ -172,7 +185,7 @@ function Footer() {
           </VStack>
         </GridItem>
 
-        <GridItem>
+        <GridItem hideBelow="md">
           <VStack alignItems="flex-end" gap={3}>
             <Text
               color={colors.white}
@@ -249,7 +262,7 @@ function Footer() {
           </VStack>
         </GridItem>
 
-        <GridItem>
+        <GridItem hideBelow="lg">
           <VStack alignItems="flex-end" gap={3}>
             <Text
               color={colors.white}
@@ -350,7 +363,7 @@ function Footer() {
           </VStack>
         </GridItem>
 
-        <GridItem>
+        <GridItem hideBelow="lg">
           <VStack alignItems="flex-end" gap={3}>
             <Text
               color={colors.white}
