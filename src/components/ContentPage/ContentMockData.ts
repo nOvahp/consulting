@@ -1,6 +1,6 @@
-import DOCX from "../../assets/docx.png";
-import IMG from "../../assets/img.png";
-import MOV from "../../assets/mov.png";
+import DOCX from "../../assets/Docx.png";
+import IMG from "../../assets/Img.png";
+import MOV from "../../assets/Mov.png";
 import { type LatestPostCardDataOpen } from "../LatestPostCardOpen";
 
 export const contentMockData: Record<string, LatestPostCardDataOpen[]> = {
