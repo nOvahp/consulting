@@ -1,7 +1,7 @@
 import { SimpleGrid } from "@chakra-ui/react";
-import feature1 from "../assets/featurecard1.png";
-import feature2 from "../assets/featurecard2.png";
-import feature3 from "../assets/featurecard3.png";
+import feature1 from "../assets/featureCard1.png";
+import feature2 from "../assets/featureCard2.png";
+import feature3 from "../assets/featureCard3.png";
 import FeatureCard, { type cardData } from "./FeatureCard";
 
 const feature: cardData[] = [
