@@ -1,4 +1,4 @@
-import DOCX from "../../assets/Docx.png";
+import DOCX from "../../assets/DocX.png";
 import IMG from "../../assets/Img.png";
 import MOV from "../../assets/Mov.png";
 import { type LatestPostCardDataOpen } from "../LatestPostCardOpen";
