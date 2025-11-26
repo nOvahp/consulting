@@ -4,7 +4,10 @@ import FAQPage from "@/assets/pages/FAQPage";
 import HomePage from "@/assets/pages/HomePage";
 import Layout from "@/assets/pages/Layout";
 import ErrorPage from "@/assets/pages/ٍErrorPage";
+import TicketReview from "@/assets/pages/TicketReview";
 import { createBrowserRouter } from "react-router-dom";
+import EndedTicketDetails from "@/components/ConsultingPage/EndedTicketsDetails";
+import EndedTicketReview from "@/assets/pages/EndedTicketReview";
 
 const router = createBrowserRouter([
   {
@@ -22,12 +25,20 @@ const router = createBrowserRouter([
       },
       {
         path: "faq",
-        element: <FAQPage />
+        element: <FAQPage />,
       },
       {
         path: "Consulting",
-        element: <ConsultingPage />
-      }
+        element: <ConsultingPage />,
+      },
+      {
+        path: "ticket-details",
+        element: <TicketReview />,
+      },
+      {
+        path: "/ended-ticket-details",
+        element: <EndedTicketReview />,
+      },
     ],
   },
 ]);

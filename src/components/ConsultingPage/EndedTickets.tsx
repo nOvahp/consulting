@@ -2,9 +2,9 @@ import { HStack, VStack, Text } from "@chakra-ui/react";
 import TicketCard from "./ticketCard";
 import { fonts } from "@/utilities/font";
 import { colors } from "@/utilities/colors";
-import { ticketsData } from "./ticketData";
+import { endedTicketsData } from "./ticketData";
 
-const tickets = () => {
+const EndedTickets = () => {
   return (
     <>
       <VStack mx={"6%"} mb={"65px"} alignItems="stretch">
@@ -15,10 +15,10 @@ const tickets = () => {
             fontSize={{ base: 16, md: 18, lg: 20 }}
             textAlign="right"
           >
-            تیکت های فعال
+         تیکت های خاتمه یافته
           </Text>
         </HStack>
-        {ticketsData.map((item, index) => (
+        {endedTicketsData.map((item, index) => (
           <TicketCard
             key={`${item.title}-${index}`}
             title={item.title}
@@ -27,6 +27,7 @@ const tickets = () => {
             responderName={item.responderName}
             responderPosition={item.responderPosition}
             ticketNumber={item.ticketNumber}
+            to="/ended-ticket-details"
           />
         ))}
       </VStack>
@@ -34,4 +35,4 @@ const tickets = () => {
   );
 };
 
-export default tickets;
+export default EndedTickets;

@@ -1,8 +1,9 @@
+import Activation from "@/components/activation";
+import Address from "@/components/Address";
 import ConsultingHero from "@/components/ConsultingPage/ConsultingHero";
+import EndedTickets from "@/components/ConsultingPage/EndedTickets";
 import NewTicket from "@/components/ConsultingPage/NewTicket";
 import Tickets from "@/components/ConsultingPage/tickets";
-import { Box, Grid, GridItem } from "@chakra-ui/react";
-import React from "react";
 
 const ConsultingPage = () => {
   return (
@@ -12,6 +13,9 @@ const ConsultingPage = () => {
       <Tickets />
 
       <NewTicket />
+      <EndedTickets />
+      <Activation />
+      <Address />
     </>
   );
 };

@@ -7,6 +7,7 @@ export const colors = {
   footerBorder: "#3B3B3B",
   footerText: "#9D9D9D",
   footer: "#06202B",
+  alert:"#EB5252",
   button: {
     transparent: "transparent",
     default: "blue.500",
