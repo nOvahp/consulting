@@ -32,8 +32,8 @@ const ContentMenu = ({ onCategoryChange }: ContentMenuProps) => {
       alignItems="flex-end"
       gap={4}
       width="100%"
-      position="sticky"
-      top="20px"
+      position={{ base: "static", lg: "sticky" }}
+      top={{ lg: "20px" }}
       alignSelf="flex-start"
     >
       <Text

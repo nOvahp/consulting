@@ -21,8 +21,8 @@ const Contents = () => {
         <ContentHero />
       </Box>
       <Grid
-        templateAreas={`"main aside"`}
-        templateColumns="1fr 200px"
+        templateAreas={{ base: `"main"`, lg: `"main aside"` }}
+        templateColumns={{ base: "1fr", lg: "1fr 200px" }}
         mx={"6%"}
         mb={"6%"}
       >
@@ -30,9 +30,17 @@ const Contents = () => {
           <ContentMenu onCategoryChange={setSelectedCategory} />
         </GridItem>
 
-        <GridItem area="main" mr={"2%"}>
-          <VStack width="100%">
-            <HStack width="100%">
+        <GridItem area="main" mr={{ base: 0, lg: "2%" }}>
+          <VStack width="100%" gap={4}>
+            <Box hideFrom="lg" width="100%">
+              <ContentMenu onCategoryChange={setSelectedCategory} />
+            </Box>
+
+            <HStack
+              width="100%"
+              flexDirection={{ base: "column", md: "row" }}
+              alignItems={{ base: "stretch", md: "center" }}
+            >
               <ContentSorting onSortChange={setSortBy} />
               <ContentFilter />
 

@@ -1,9 +1,14 @@
 import { Box, HStack } from "@chakra-ui/react";
 import { colors } from "../utilities/colors";
 import { fonts } from "../utilities/font";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 const NavBar = () => {
+  const location = useLocation();
+  const pathname = location.pathname;
+
+  const isActive = (path: string) => pathname === path;
+
   return (
     <Box
       bg={colors.background}
@@ -28,11 +33,14 @@ const NavBar = () => {
             fontSize: "clamp(12px, 1vw, 14px)",
             color: colors.white,
             textDecoration: "none",
-            backgroundColor: colors.button.solid,
+            backgroundColor: isActive("/account")
+              ? colors.button.secondory
+              : colors.button.solid,
             padding: "8px 16px",
             borderRadius: "10px",
             whiteSpace: "nowrap",
             transition: "all 0.2s",
+            cursor: "pointer",
           }}
           onMouseEnter={(e) => {
             e.currentTarget.style.opacity = "0.9";
@@ -51,11 +59,14 @@ const NavBar = () => {
               fontSize: "clamp(11px, 1vw, 15px)",
               color: colors.black,
               textDecoration: "none",
-              backgroundColor: colors.button.transparent,
+              backgroundColor: isActive("/faq")
+                ? colors.button.secondory
+                : colors.button.transparent,
               padding: "6px 12px",
               borderRadius: "8px",
               whiteSpace: "nowrap",
               transition: "all 0.2s",
+              cursor: "pointer",
             }}
             onMouseEnter={(e) => {
               e.currentTarget.style.opacity = "0.7";
@@ -73,11 +84,14 @@ const NavBar = () => {
               fontSize: "clamp(11px, 1vw, 15px)",
               color: colors.black,
               textDecoration: "none",
-              backgroundColor: colors.button.transparent,
+              backgroundColor: isActive("/surveys")
+                ? colors.button.secondory
+                : colors.button.transparent,
               padding: "6px 12px",
               borderRadius: "8px",
               whiteSpace: "nowrap",
               transition: "all 0.2s",
+              cursor: "pointer",
             }}
             onMouseEnter={(e) => {
               e.currentTarget.style.opacity = "0.7";
@@ -95,11 +109,14 @@ const NavBar = () => {
               fontSize: "clamp(11px, 1vw, 15px)",
               color: colors.black,
               textDecoration: "none",
-              backgroundColor: colors.button.transparent,
+              backgroundColor: isActive("/reports")
+                ? colors.button.secondory
+                : colors.button.transparent,
               padding: "6px 12px",
               borderRadius: "8px",
               whiteSpace: "nowrap",
               transition: "all 0.2s",
+              cursor: "pointer",
             }}
             onMouseEnter={(e) => {
               e.currentTarget.style.opacity = "0.7";
@@ -117,11 +134,14 @@ const NavBar = () => {
               fontSize: "clamp(11px, 1vw, 15px)",
               color: colors.black,
               textDecoration: "none",
-              backgroundColor: colors.button.transparent,
+              backgroundColor: isActive("/Consulting")
+                ? colors.button.secondory
+                : colors.button.transparent,
               padding: "6px 12px",
               borderRadius: "8px",
               whiteSpace: "nowrap",
               transition: "all 0.2s",
+              cursor: "pointer",
             }}
             onMouseEnter={(e) => {
               e.currentTarget.style.opacity = "0.7";
@@ -139,11 +159,15 @@ const NavBar = () => {
               fontSize: "clamp(11px, 1vw, 15px)",
               color: colors.black,
               textDecoration: "none",
-              backgroundColor: colors.button.transparent,
+              backgroundColor:
+                pathname === "/"
+                  ? colors.button.secondory
+                  : colors.button.transparent,
               padding: "6px 12px",
               borderRadius: "8px",
               whiteSpace: "nowrap",
               transition: "all 0.2s",
+              cursor: "pointer",
             }}
             onMouseEnter={(e) => {
               e.currentTarget.style.opacity = "0.7";
@@ -161,11 +185,14 @@ const NavBar = () => {
               fontSize: "clamp(11px, 1vw, 15px)",
               color: colors.black,
               textDecoration: "none",
-              backgroundColor: colors.button.transparent,
+              backgroundColor: isActive("/content")
+                ? colors.button.secondory
+                : colors.button.transparent,
               padding: "6px 12px",
               borderRadius: "8px",
               whiteSpace: "nowrap",
               transition: "all 0.2s",
+              cursor: "pointer",
             }}
             onMouseEnter={(e) => {
               e.currentTarget.style.opacity = "0.7";

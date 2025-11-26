@@ -3,10 +3,14 @@ import { Box, IconButton, VStack } from "@chakra-ui/react";
 import { Menu, X } from "lucide-react";
 import { colors } from "../utilities/colors";
 import { fonts } from "../utilities/font";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 const MobileNav = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const location = useLocation();
+  const pathname = location.pathname;
+
+  const isActive = (path: string) => pathname === path;
 
   const toggleMenu = () => setIsOpen(!isOpen);
   const closeMenu = () => setIsOpen(false);
@@ -58,6 +62,7 @@ const MobileNav = () => {
                 fontSize: "24px",
                 color: colors.black,
                 textDecoration: "none",
+                cursor: "pointer",
               }}
             >
               سامانه مشاور
@@ -74,12 +79,15 @@ const MobileNav = () => {
                   fontSize: "18px",
                   color: colors.white,
                   textDecoration: "none",
-                  backgroundColor: colors.button.solid,
+                  backgroundColor: isActive("/account")
+                    ? colors.button.secondory
+                    : colors.button.solid,
                   padding: "10px",
                   borderRadius: "10px",
                   textAlign: "center",
                   display: "block",
                   transition: "all 0.2s",
+                  cursor: "pointer",
                 }}
                 onMouseEnter={(e) => {
                   e.currentTarget.style.opacity = "0.9";
@@ -100,12 +108,15 @@ const MobileNav = () => {
                     fontSize: "18px",
                     color: colors.black,
                     textDecoration: "none",
-                    backgroundColor: colors.button.transparent,
+                    backgroundColor: isActive("/faq")
+                      ? colors.button.secondory
+                      : colors.button.transparent,
                     padding: "15px",
                     borderRadius: "8px",
                     textAlign: "right",
                     display: "block",
                     transition: "all 0.2s",
+                    cursor: "pointer",
                   }}
                   onMouseEnter={(e) => {
                     e.currentTarget.style.opacity = "0.7";
@@ -124,12 +135,15 @@ const MobileNav = () => {
                     fontSize: "18px",
                     color: colors.black,
                     textDecoration: "none",
-                    backgroundColor: colors.button.transparent,
+                    backgroundColor: isActive("/surveys")
+                      ? colors.button.secondory
+                      : colors.button.transparent,
                     padding: "15px",
                     borderRadius: "8px",
                     textAlign: "right",
                     display: "block",
                     transition: "all 0.2s",
+                    cursor: "pointer",
                   }}
                   onMouseEnter={(e) => {
                     e.currentTarget.style.opacity = "0.7";
@@ -148,12 +162,15 @@ const MobileNav = () => {
                     fontSize: "18px",
                     color: colors.black,
                     textDecoration: "none",
-                    backgroundColor: colors.button.transparent,
+                    backgroundColor: isActive("/reports")
+                      ? colors.button.secondory
+                      : colors.button.transparent,
                     padding: "15px",
                     borderRadius: "8px",
                     textAlign: "right",
                     display: "block",
                     transition: "all 0.2s",
+                    cursor: "pointer",
                   }}
                   onMouseEnter={(e) => {
                     e.currentTarget.style.opacity = "0.7";
@@ -165,19 +182,22 @@ const MobileNav = () => {
                   گزارش های جامع
                 </Link>
                 <Link
-                  to="/contact"
+                  to="/Consulting"
                   onClick={closeMenu}
                   style={{
                     fontFamily: fonts.body,
                     fontSize: "18px",
                     color: colors.black,
                     textDecoration: "none",
-                    backgroundColor: colors.button.transparent,
+                    backgroundColor: isActive("/Consulting")
+                      ? colors.button.secondory
+                      : colors.button.transparent,
                     padding: "15px",
                     borderRadius: "8px",
                     textAlign: "right",
                     display: "block",
                     transition: "all 0.2s",
+                    cursor: "pointer",
                   }}
                   onMouseEnter={(e) => {
                     e.currentTarget.style.opacity = "0.7";
@@ -189,19 +209,23 @@ const MobileNav = () => {
                   ارتباط با مشاور
                 </Link>
                 <Link
-                  to="/guide"
+                  to="/"
                   onClick={closeMenu}
                   style={{
                     fontFamily: fonts.body,
                     fontSize: "18px",
                     color: colors.black,
                     textDecoration: "none",
-                    backgroundColor: colors.button.transparent,
+                    backgroundColor:
+                      pathname === "/"
+                        ? colors.button.secondory
+                        : colors.button.transparent,
                     padding: "15px",
                     borderRadius: "8px",
                     textAlign: "right",
                     display: "block",
                     transition: "all 0.2s",
+                    cursor: "pointer",
                   }}
                   onMouseEnter={(e) => {
                     e.currentTarget.style.opacity = "0.7";
@@ -220,12 +244,15 @@ const MobileNav = () => {
                     fontSize: "18px",
                     color: colors.black,
                     textDecoration: "none",
-                    backgroundColor: colors.button.transparent,
+                    backgroundColor: isActive("/content")
+                      ? colors.button.secondory
+                      : colors.button.transparent,
                     padding: "15px",
                     borderRadius: "8px",
                     textAlign: "right",
                     display: "block",
                     transition: "all 0.2s",
+                    cursor: "pointer",
                   }}
                   onMouseEnter={(e) => {
                     e.currentTarget.style.opacity = "0.7";

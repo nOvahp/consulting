@@ -20,7 +20,7 @@ const ContentSearch = ({ onSearchChange }: ContentSearchProps) => {
   return (
     <Input
       type="text"
-      ml={"1"}
+      ml={1}
       bg={colors.background}
       borderRadius={12}
       borderWidth={2}
@@ -31,6 +31,8 @@ const ContentSearch = ({ onSearchChange }: ContentSearchProps) => {
       color={colors.black}
       flex="1"
       minWidth="50%"
+      py={{ base: 2, md: 3 }}
+      px={{ base: 3, md: 4 }}
       value={searchQuery}
       onChange={handleChange}
     />

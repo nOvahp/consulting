@@ -1,13 +1,15 @@
 import ConsultingPage from "@/assets/pages/ConsultingPage";
 import Contents from "@/assets/pages/ContentsPage";
+import EndedTicketReview from "@/assets/pages/EndedTicketReview";
 import FAQPage from "@/assets/pages/FAQPage";
 import HomePage from "@/assets/pages/HomePage";
 import Layout from "@/assets/pages/Layout";
-import ErrorPage from "@/assets/pages/ٍErrorPage";
 import TicketReview from "@/assets/pages/TicketReview";
+import ErrorPage from "@/assets/pages/ٍErrorPage";
+import AccountPage from "@/assets/pages/AccountPage";
+import SurveysPage from "@/assets/pages/SurveysPage";
+import ReportsPage from "@/assets/pages/ReportsPage";
 import { createBrowserRouter } from "react-router-dom";
-import EndedTicketDetails from "@/components/ConsultingPage/EndedTicketsDetails";
-import EndedTicketReview from "@/assets/pages/EndedTicketReview";
 
 const router = createBrowserRouter([
   {
@@ -22,6 +24,18 @@ const router = createBrowserRouter([
       {
         path: "content",
         element: <Contents />,
+      },
+      {
+        path: "account",
+        element: <AccountPage />,
+      },
+      {
+        path: "surveys",
+        element: <SurveysPage />,
+      },
+      {
+        path: "reports",
+        element: <ReportsPage />,
       },
       {
         path: "faq",
