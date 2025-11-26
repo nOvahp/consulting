@@ -1,8 +1,8 @@
 import { colors } from "@/utilities/colors";
 import { fonts } from "@/utilities/font";
 import { Box, HStack, Icon, Text, VStack, Button } from "@chakra-ui/react";
-import { FileQuestionMark, ThumbsUp, ThumbsDown } from "lucide-react";
-import { useLocation } from "react-router-dom";
+import { FileQuestionMark } from "lucide-react";
+import { useLocation, useNavigate } from "react-router-dom";
 
 interface TicketDetailsState {
   ticketNumber?: string;
@@ -14,6 +14,7 @@ interface TicketDetailsState {
 }
 
 function EndedTicketDetails() {
+  const navigate = useNavigate();
   const location = useLocation();
   const state = location.state as TicketDetailsState | null;
 
@@ -28,8 +29,17 @@ function EndedTicketDetails() {
   return (
     <Box mx={"6%"} my={"40px"}>
       <VStack alignItems="stretch" gap={4} width="100%">
-        
-        
+        <Button
+          alignSelf="flex-start"
+          variant="ghost"
+          fontFamily={fonts.body}
+          fontSize={{ base: 13, md: 14 }}
+          color={colors.dark}
+          onClick={() => navigate(-1)}
+        >
+          ← بازگشت
+        </Button>
+
         <Text
           color={colors.dark}
           fontFamily={fonts.semiBold}
@@ -39,7 +49,6 @@ function EndedTicketDetails() {
           {ticketNumber}: شماره تیکت
         </Text>
 
-        
         <Box
           width="100%"
           padding={4}
@@ -48,9 +57,11 @@ function EndedTicketDetails() {
           bg={colors.background}
           borderColor={colors.border}
         >
-          <HStack justifyContent="space-between" alignItems="center" width="100%">
-            
-           
+          <HStack
+            justifyContent="space-between"
+            alignItems="center"
+            width="100%"
+          >
             <Text
               fontFamily={fonts.body}
               fontSize={{ base: 12, md: 13 }}
@@ -60,8 +71,7 @@ function EndedTicketDetails() {
               {date}
             </Text>
 
-           
-            <HStack alignItems="center" >
+            <HStack alignItems="center">
               <Text
                 fontFamily={fonts.bold}
                 fontSize={{ base: 16, md: 18, lg: 20 }}
@@ -81,7 +91,6 @@ function EndedTicketDetails() {
           </HStack>
         </Box>
 
-        
         <Box
           width="100%"
           padding={4}
@@ -100,7 +109,6 @@ function EndedTicketDetails() {
             {description}
           </Text>
 
-          
           <Text
             mt={3}
             fontFamily={fonts.bold}
@@ -111,11 +119,7 @@ function EndedTicketDetails() {
             پاسخ‌دهنده: {responderName}
             {responderPosition ? ` (${responderPosition})` : ""}
           </Text>
-
-          
-          
         </Box>
-        
       </VStack>
     </Box>
   );

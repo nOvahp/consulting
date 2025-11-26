@@ -2,8 +2,8 @@ import { colors } from "@/utilities/colors";
 import { fonts } from "@/utilities/font";
 import { Box, HStack, Icon, Text, VStack, Button } from "@chakra-ui/react";
 import { FileQuestionMark, ThumbsUp, ThumbsDown } from "lucide-react";
-import { useLocation } from "react-router-dom";
-import { moveTicketToEnded } from "./ticketData";
+import { useLocation, useNavigate } from "react-router-dom";
+import { endTicket } from "./ticketData";
 
 interface TicketDetailsState {
   ticketNumber?: string;
@@ -15,6 +15,7 @@ interface TicketDetailsState {
 }
 
 function TicketDetails() {
+  const navigate = useNavigate();
   const location = useLocation();
   const state = location.state as TicketDetailsState | null;
 
@@ -29,7 +30,16 @@ function TicketDetails() {
   return (
     <Box mx={"6%"} my={"40px"}>
       <VStack alignItems="stretch" gap={4} width="100%">
-        {/* شماره تیکت */}
+        <Button
+          alignSelf="flex-start"
+          variant="ghost"
+          fontFamily={fonts.body}
+          fontSize={{ base: 13, md: 14 }}
+          color={colors.dark}
+          onClick={() => navigate(-1)}
+        >
+          ← بازگشت
+        </Button>
         <Text
           color={colors.dark}
           fontFamily={fonts.semiBold}
@@ -39,7 +49,6 @@ function TicketDetails() {
           {ticketNumber}: شماره تیکت
         </Text>
 
-        {/* باکس عنوان + تاریخ */}
         <Box
           width="100%"
           padding={4}
@@ -53,7 +62,6 @@ function TicketDetails() {
             alignItems="center"
             width="100%"
           >
-            {/* تاریخ */}
             <Text
               fontFamily={fonts.body}
               fontSize={{ base: 12, md: 13 }}
@@ -63,7 +71,6 @@ function TicketDetails() {
               {date}
             </Text>
 
-            {/* عنوان + آیکن */}
             <HStack alignItems="center">
               <Text
                 fontFamily={fonts.bold}
@@ -84,7 +91,6 @@ function TicketDetails() {
           </HStack>
         </Box>
 
-        {/* توضیحات تیکت */}
         <Box
           width="100%"
           padding={4}
@@ -103,7 +109,6 @@ function TicketDetails() {
             {description}
           </Text>
 
-          {/* پاسخ‌دهنده */}
           <Text
             mt={3}
             fontFamily={fonts.bold}
@@ -156,9 +161,8 @@ function TicketDetails() {
           fontSize={{ base: 14, md: 24 }}
           padding={"2%"}
           onClick={() => {
-            if (ticketNumber !== "نامشخص") {
-              moveTicketToEnded(ticketNumber);
-            }
+            endTicket(state?.ticketNumber);
+            navigate(-1);
           }}
         >
           پایان تیکت

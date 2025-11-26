@@ -125,12 +125,12 @@ export const endedTicketsData: ConsultingCardData[] = [
   },
 ];
 
-export function moveTicketToEnded(ticketNumber: string) {
+export function endTicket(ticketNumber: string | undefined) {
+  if (!ticketNumber) return;
   const index = ticketsData.findIndex(
-    (ticket) => ticket.ticketNumber === ticketNumber,
+    (t) => t.ticketNumber === ticketNumber
   );
   if (index === -1) return;
-
   const [ticket] = ticketsData.splice(index, 1);
   endedTicketsData.push(ticket);
 }
