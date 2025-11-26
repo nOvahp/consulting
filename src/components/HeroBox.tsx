@@ -1,6 +1,7 @@
 import { Box, Button, Image, Text, VStack } from "@chakra-ui/react";
 import blockImage from "../assets/Block.png";
 import { fonts } from "@/utilities/font";
+import { colors } from "@/utilities/colors";
 
 const HeroBox = () => {
   return (
@@ -79,6 +80,7 @@ const HeroBox = () => {
           pointerEvents="auto"
           borderRadius={12}
           mt={{ base: 2, md: 4 }}
+          bg={colors.white}
         >
           برو به مطالب آموزشی
         </Button>
