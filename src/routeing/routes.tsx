@@ -1,4 +1,5 @@
-import Contents from "@/assets/pages/Contents";
+import ConsultingPage from "@/assets/pages/ConsultingPage";
+import Contents from "@/assets/pages/ContentsPage";
 import FAQPage from "@/assets/pages/FAQPage";
 import HomePage from "@/assets/pages/HomePage";
 import Layout from "@/assets/pages/Layout";
@@ -22,6 +23,10 @@ const router = createBrowserRouter([
       {
         path: "faq",
         element: <FAQPage />
+      },
+      {
+        path: "Consulting",
+        element: <ConsultingPage />
       }
     ],
   },

@@ -1,6 +1,7 @@
 import { colors } from "@/utilities/colors";
 import { fonts } from "@/utilities/font";
-import { Button, HStack, Text, VStack } from "@chakra-ui/react";
+import { HStack, Text, VStack } from "@chakra-ui/react";
+import { Link } from "react-router-dom";
 import FAQCard, { type FAQCardData } from "./FAQCard";
 
 const feature: FAQCardData[] = [
@@ -81,16 +82,27 @@ function FAQ() {
     <>
       <VStack mx={"6%"} mb={"65px"} alignItems="stretch">
         <HStack justifyContent={"space-between"} width={"100%"}>
-          <Button 
-            fontFamily={fonts.body} 
-            fontSize={{ base: 11, md: 12, lg: 13 }} 
-            color={colors.dark}
+          <Link
+            to="/faq"
+            style={{
+              fontFamily: fonts.body,
+              fontSize: "clamp(11px, 1vw, 13px)",
+              color: colors.dark,
+              textDecoration: "none",
+              transition: "all 0.2s",
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.textDecoration = "underline";
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.textDecoration = "none";
+            }}
           >
             مشاهده همه
-          </Button>
-          <Text 
-            color={colors.black} 
-            fontFamily={fonts.bold} 
+          </Link>
+          <Text
+            color={colors.black}
+            fontFamily={fonts.bold}
             fontSize={{ base: 16, md: 18, lg: 20 }}
           >
             سوالات متداول

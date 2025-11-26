@@ -28,7 +28,14 @@ const ContentMenu = ({ onCategoryChange }: ContentMenuProps) => {
   };
 
   return (
-    <VStack alignItems="flex-end" gap={4} width="100%">
+    <VStack
+      alignItems="flex-end"
+      gap={4}
+      width="100%"
+      position="sticky"
+      top="20px"
+      alignSelf="flex-start"
+    >
       <Text
         color={colors.footer}
         fontSize={24}

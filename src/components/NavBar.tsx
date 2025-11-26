@@ -111,7 +111,7 @@ const NavBar = () => {
             گزارش های جامع
           </Link>
           <Link
-            to="/contact"
+            to="/Consulting"
             style={{
               fontFamily: fonts.body,
               fontSize: "clamp(11px, 1vw, 15px)",
@@ -133,7 +133,7 @@ const NavBar = () => {
             ارتباط با مشاور
           </Link>
           <Link
-            to="/guide"
+            to="/"
             style={{
               fontFamily: fonts.body,
               fontSize: "clamp(11px, 1vw, 15px)",
