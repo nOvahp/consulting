@@ -1,4 +1,4 @@
-import Footer from "@/components/Footer";
+import Footer from "@/components/FooterApp";
 import NavBar from "@/components/NavBar";
 import MobileNav from "@/components/MobileNav";
 import { Box } from "@chakra-ui/react";
