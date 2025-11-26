@@ -2,9 +2,9 @@ import { colors } from "@/utilities/colors";
 import { fonts } from "@/utilities/font";
 import { HStack, Text, VStack } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
-import DOCX from "../assets/docx.png";
-import IMG from "../assets/img.png";
-import MOV from "../assets/mov.png";
+import DOCX from "../assets/DocX.png";
+import IMG from "../assets/IMG.png";
+import MOV from "../assets/MOV.png";
 import LatestPostCardOpen, {
   type LatestPostCardDataOpen,
 } from "./LatestPostCardOpen";
